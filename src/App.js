@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Contador from './components/Contador/Contador';
+import Main from './components/Main/Main';
+import Navbar from './components/Navbar/Navbar';
+import './components/Contador/Contador.css'
+import { useState } from 'react';
 
 function App() {
+
+  const navbarlinks = ['inicio','percios','nosotros','contacto']
+
+  const [show, setShow] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+         { show ? <Contador/> : <h1>Cargandooo...</h1>}
+         <button onClick={() => setShow(!show) }>{show ? 'Oculatar' : 'Mostrar '}</button>
+          {/* <Contador valor_inicial={5}/> */}
     </div>
   );
 }
