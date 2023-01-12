@@ -1,14 +1,10 @@
 import React from "react";
 import NavLi from "./NavLi";
-
+import './Navbar.css'
 
 
 const Navbar = (props) => {
   const { logo_text, navbarlinks,navbar_styles } = props;
-  // DomSync 
-  // Props - (90%)
-  // States - V 
-  // Ciclo de Vida
 
   return (
     <nav className={`${navbar_styles ? navbar_styles : 'navbar navbar-expand-lg bg-body-tertiary'}`}>
@@ -29,8 +25,8 @@ const Navbar = (props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            {navbarlinks.map((link, index) => (
-              <NavLi key={index} text={link} />
+            {navbarlinks && navbarlinks.map(({path,text}, index) => (
+              <NavLi key={index} path={path} text={text} />
             ))}
           </ul>
         </div>

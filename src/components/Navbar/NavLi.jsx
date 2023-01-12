@@ -1,12 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const NavLi = (props) => {
-  const { text } = props;
+  const { text,path } = props;
   return (
     <li className="nav-item">
-      <a className="nav-link" href="#">
+      <NavLink className={ ({isActive}) => ` ${isActive ? 'active nav-link' : 'nav-link'} `} to={path}>
         {text}
-      </a>
+      </NavLink>
     </li>
   );
 };

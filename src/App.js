@@ -1,12 +1,12 @@
 import './App.css';
 import './components/Contador/Contador.css'
-import Formulario from './components/Formulario/Formulario';
+import Routing from './routes/Routes';
 
 function App() {
   return (
-    <div>
-        <Formulario/>
-    </div>
+    <>
+        <Routing/>
+    </>
   );
 }
 
