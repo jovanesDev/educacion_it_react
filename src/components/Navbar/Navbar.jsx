@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import NavLi from "./NavLi";
 import './Navbar.css'
+import { UserContext } from "../../context/UserGlobal";
 
 
 const Navbar = (props) => {
+
   const { logo_text, navbarlinks,navbar_styles } = props;
+  const {handleLogOut} = useContext(UserContext)
 
   return (
     <nav className={`${navbar_styles ? navbar_styles : 'navbar navbar-expand-lg bg-body-tertiary'}`}>
@@ -30,6 +33,8 @@ const Navbar = (props) => {
             ))}
           </ul>
         </div>
+
+        <button onClick={handleLogOut} className="btn btn-danger">Log Out</button>
       </div>
     </nav>
   );
