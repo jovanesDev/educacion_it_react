@@ -4,9 +4,9 @@ import { UserContext } from '../context/UserGlobal'
 
 const InfoSecreta = () => {
 
-  const { permitido } = useContext(UserContext);
+ const { permitido } = useContext(UserContext);
 
-  if (!permitido) return <Navigate to="/"/>
+ if (!permitido) return <Navigate to="/"/>
 
   return (
     <h1>InfoSecreta</h1>
