@@ -1,0 +1,41 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nombre": "manzana",
+      "categoria": "fruta"
+    },
+    {
+      "id": 2,
+      "nombre": "banana",
+      "categoria": "fruta"
+    },
+    {
+      "id": 3,
+      "nombre": "kiwi",
+      "categoria": "fruta"
+    },
+    {
+      "nombre": "mango",
+      "categoria": "fruta",
+      "id": 4
+    },
+    {
+      "nombre": "limon",
+      "categoria": "fruta",
+      "id": 5
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "nombre": "Jova",
+      "cargo": "Profe"
+    },
+    {
+      "id": 2,
+      "nombre": "Leo",
+      "cargo": "alumno"
+    }
+  ]
+}
