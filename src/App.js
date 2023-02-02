@@ -1,22 +1,17 @@
+import React from 'react'
 import './App.css';
 import Contador from './components/Contador/Contador';
-import Main from './components/Main/Main';
-import Navbar from './components/Navbar/Navbar';
-import './components/Contador/Contador.css'
-import { useState } from 'react';
+import {Provider} from 'react-redux'
+import { store } from './redux/store';
+import Layout from './components/Layout/Layout';
 
 function App() {
-
-  const navbarlinks = ['inicio','percios','nosotros','contacto']
-
-  const [show, setShow] = useState(true);
-
   return (
-    <div>
-         { show ? <Contador/> : <h1>Cargandooo...</h1>}
-         <button onClick={() => setShow(!show) }>{show ? 'Oculatar' : 'Mostrar '}</button>
-          {/* <Contador valor_inicial={5}/> */}
-    </div>
+    <Provider store={store}>
+      <Layout>
+        <Contador/>
+      </Layout>
+    </Provider>
   );
 }
 
