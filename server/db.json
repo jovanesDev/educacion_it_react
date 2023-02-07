@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": "0",
+      "name": "Zapatilla Nike",
+      "categoria": "Zapatilla"
+    },
+    {
+      "id": "1",
+      "name": "Zapatilla Adidas",
+      "categoria": "Zapatilla"
+    },
+    {
+      "name": "jaguar",
+      "categoria": "zapatilla",
+      "id": "o8gEW0t"
+    },
+    {
+      "name": "Zapatilla Puma",
+      "categoria": "zapatilla",
+      "id": "hW86eH_"
+    }
+  ]
+}
